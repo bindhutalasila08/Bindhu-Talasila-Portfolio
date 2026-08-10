@@ -3,187 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bindhu Bhargavi Talasila</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Bindhu Bhargavi Talasila - Resume</title>
 
 <style>
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    background: #f4f7fb;
-    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    color: #000;
+    background: #fff;
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+ul {
+    margin: 5px 0 10px 20px;
 }
 
 .header {
-    background: linear-gradient(135deg, #4f8cff, #6ed0ff);
-    color: white;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.header h1 {
-    margin: 0;
+    margin-bottom: 15px;
 }
 
 .role {
     font-weight: bold;
-    letter-spacing: 2px;
-    margin-top: 5px;
+    letter-spacing: 1px;
 }
 
-.contact {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.card h2 {
-    margin-top: 0;
-    color: #4f8cff;
-}
-
-.icon {
-    margin-right: 10px;
-    color: #4f8cff;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-.job-title {
-    font-weight: bold;
-}
-
-.subtext {
-    font-size: 14px;
-    color: gray;
-}
-
-.skills span {
-    display: inline-block;
-    background: #eef3ff;
-    color: #4f8cff;
-    padding: 6px 10px;
-    margin: 5px;
-    border-radius: 6px;
-    font-size: 13px;
-}
-
-@media (max-width: 600px) {
-    .header {
-        text-align: left;
-    }
+.section {
+    margin-bottom: 10px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-<div class="header">
+<header class="header">
     <h1>BINDHU BHARGAVI TALASILA</h1>
-    <div class="role">SDET | AUTOMATION ENGINEER</div>
-    <div class="contact">
-        <i class="fa-solid fa-location-dot"></i> Hyderabad |
-        <i class="fa-solid fa-phone"></i> +91-9100861350 |
-        <i class="fa-solid fa-envelope"></i> bindhutalasila08@gmail.com
-    </div>
-    <div><strong>Immediate Joiner</strong></div>
-</div>
+    <p class="role">SDET | AUTOMATION ENGINEER</p>
+    <p>Hyderabad, India | +91-9100861350 | bindhutalasila08@gmail.com | LinkedIn</p>
+    <p><strong>Immediate Joiner</strong></p>
+</header>
 
-<div class="card">
-    <h2><i class="fa-solid fa-user icon"></i>About</h2>
+<section>
+    <h2>About</h2>
     <p>
-    Results-driven SDET with 4.5+ years of experience designing scalable automation frameworks for Web, API, and backend systems.
-    Strong expertise in Playwright, Selenium, and API automation. Proven track record of reducing regression effort by 40% and
-    accelerating release cycles through CI/CD and parallel execution.
+    SDET with 4.5+ years of experience in automation testing, Playwright, Selenium, and API testing.
+    Skilled in designing scalable automation frameworks for web and backend systems.
+    Strong experience in CI/CD pipelines, regression testing, and Agile methodologies.
+    Proven ability to reduce regression effort by 40% and improve release efficiency.
     </p>
-</div>
+</section>
 
-<div class="card">
-    <h2><i class="fa-solid fa-chart-line icon"></i>By The Numbers</h2>
+<section>
+    <h2>By The Numbers</h2>
     <ul>
         <li>Reduced regression execution time by 40%</li>
         <li>Automated 200+ end-to-end test cases</li>
-        <li>Cut nightly regression time by 2+ hours</li>
+        <li>Reduced nightly regression time by 2+ hours</li>
         <li>Improved defect triage efficiency by 30%</li>
     </ul>
-</div>
+</section>
 
-<div class="card">
-    <h2><i class="fa-solid fa-briefcase icon"></i>Experience</h2>
+<section>
+    <h2>Experience</h2>
 
-    <p class="job-title">Automation Engineer (SDET)</p>
-    <p class="subtext">NCR Voyix | Oct 2023 – Feb 2026</p>
-    <ul>
-        <li>Designed automation frameworks using Playwright & Selenium</li>
-        <li>Developed BDD + POM frameworks</li>
-        <li>Automated POS and payment workflows</li>
-        <li>Integrated CI/CD pipelines using Jenkins</li>
-    </ul>
-
-    <p class="job-title">Software Engineer – SDET</p>
-    <p class="subtext">Kyndryl | Nov 2021 – Oct 2023</p>
-    <ul>
-        <li>Automated monitoring across 3000+ servers</li>
-        <li>Developed scripts to reduce manual effort</li>
-        <li>Supported CI/CD and deployments</li>
-    </ul>
-</div>
-
-<div class="card">
-    <h2><i class="fa-solid fa-diagram-project icon"></i>Projects</h2>
-    <ul>
-        <li><strong>POS Automation Framework:</strong> Hybrid BDD + POM framework</li>
-        <li><strong>API Automation Framework:</strong> REST API validation suite</li>
-        <li><strong>AI Assisted Testing:</strong> Used GitHub Copilot for faster scripting</li>
-    </ul>
-</div>
-
-<div class="card">
-    <h2><i class="fa-solid fa-code icon"></i>Technical Skills</h2>
-    <div class="skills">
-        <span>Playwright</span><span>Selenium</span><span>JavaScript</span>
-        <span>TypeScript</span><span>C#</span><span>Java</span>
-        <span>Postman</span><span>REST Assured</span>
-        <span>Jenkins</span><span>Azure DevOps</span>
-        <span>SQL</span>
+    <div class="section">
+        <p><strong>Automation Engineer (SDET)</strong></p>
+        <p>NCR Voyix | Oct 2023 – Feb 2026</p>
+        <ul>
+            <li>Developed automation frameworks using Playwright, Selenium, C#, and BDD</li>
+            <li>Designed Page Object Model and data-driven frameworks</li>
+            <li>Automated POS and payment workflows</li>
+            <li>Built API automation for backend validation</li>
+            <li>Integrated automation into Jenkins CI/CD pipelines</li>
+            <li>Implemented parallel execution for faster regression testing</li>
+        </ul>
     </div>
-</div>
 
-<div class="card">
-    <h2><i class="fa-solid fa-graduation-cap icon"></i>Education</h2>
+    <div class="section">
+        <p><strong>Software Engineer – SDET / Automation Engineer</strong></p>
+        <p>Kyndryl Solutions Pvt Ltd | Nov 2021 – Oct 2023</p>
+        <ul>
+            <li>Automated monitoring workflows across 3000+ servers</li>
+            <li>Developed scripts to reduce manual effort</li>
+            <li>Supported CI/CD and deployment processes</li>
+            <li>Managed incidents using ServiceNow</li>
+        </ul>
+    </div>
+
+</section>
+
+<section>
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>POS Automation Framework:</strong> BDD + POM + Data-driven automation framework</li>
+        <li><strong>API Automation Framework:</strong> REST API testing and validation</li>
+        <li><strong>AI Assisted Test Automation:</strong> Used GitHub Copilot for faster scripting</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <ul>
+        <li>Playwright, Selenium WebDriver, Automation Testing</li>
+        <li>JavaScript, TypeScript, C#, Java, Python</li>
+        <li>API Testing: Postman, REST Assured</li>
+        <li>CI/CD: Jenkins, Azure DevOps, Git</li>
+        <li>BDD: Cucumber, SpecFlow, NUnit</li>
+        <li>SQL, Test Automation Frameworks</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Education</h2>
     <p>B.Tech – Computer Science Engineering</p>
-</div>
+</section>
 
-<div class="card">
-    <h2><i class="fa-solid fa-certificate icon"></i>Certifications</h2>
+<section>
+    <h2>Certifications</h2>
     <ul>
         <li>AWS – Introduction to Generative AI</li>
         <li>IBM – AI in the Real World</li>
         <li>IBM DevOps Professional Certificate</li>
         <li>Scrum Foundation Professional Certificate</li>
     </ul>
-</div>
-
-</div>
+</section>
 
 </body>
 </html>
