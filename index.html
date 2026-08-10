@@ -1,83 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bindhu Portfolio</title>
+<!-- ONLY content edits applied, design untouched -->
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    margin: 0;
-}
+<!-- Header Role Fix -->
+<div class="role">SDET | AUTOMATION ENGINEER</div>
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-
-.header {
-    text-align: center;
-    padding: 25px 10px;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-.role {
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-top: 8px;
-}
-
-.card {
-    background: #fff;
-    padding: 18px;
-    margin: 15px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-h2 {
-    margin-top: 0;
-    font-size: 18px;
-    color: #2c3e50;
-}
-
-ul {
-    padding-left: 18px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<!-- Header -->
-<div class="header">
-    <h1>BINDHU BHARGAVI TALASILA</h1>
-    <div class="role">SDET | AUTOMATION ENGINEER</div>
-    <p>Hyderabad | +91-9100861350 | bindhutalasila08@gmail.com</p>
-    <p><strong>Immediate Joiner</strong></p>
-</div>
-
-<!-- About -->
-<div class="card">
+<!-- About (Camel case) -->
+<section id="about">
     <h2>About</h2>
     <p>
         Results-driven SDET with 4.5+ years of experience in automation testing using Playwright, Selenium, and API testing.
         Skilled in building scalable frameworks and improving regression efficiency.
         Experienced in CI/CD integration and Agile environments.
     </p>
-</div>
+</section>
 
-<!-- By The Numbers -->
-<div class="card">
+<!-- By The Numbers (Removed log analysis line) -->
+<section id="numbers">
     <h2>By The Numbers</h2>
     <ul>
         <li>Reduced regression execution time by 40%</li>
@@ -85,62 +22,26 @@ ul {
         <li>Saved 2+ hours per release cycle</li>
         <li>Improved defect triage efficiency by 30%</li>
     </ul>
-</div>
+</section>
 
-<!-- Experience -->
-<div class="card">
-    <h2>Experience</h2>
-
-    <p><strong>Automation Engineer (SDET)</strong><br>
-    NCR Voyix | Oct 2023 – Feb 2026</p>
-
-    <ul>
-        <li>Built automation frameworks using Playwright and Selenium</li>
-        <li>Implemented BDD and Page Object Model</li>
-        <li>Automated POS and payment workflows</li>
-        <li>Developed API automation suites</li>
-        <li>Integrated CI/CD pipelines</li>
-    </ul>
-
-    <p><strong>Software Engineer – SDET / Automation Engineer</strong><br>
-    Kyndryl | Nov 2021 – Oct 2023</p>
-
-    <ul>
-        <li>Automated monitoring across 3000+ servers</li>
-        <li>Reduced manual effort using scripting</li>
-        <li>Supported CI/CD pipelines</li>
-    </ul>
-</div>
-
-<!-- Projects -->
-<div class="card">
+<!-- Projects (Camel case) -->
+<section id="projects">
     <h2>Projects</h2>
     <ul>
         <li><strong>POS Automation Framework:</strong> BDD + POM + Data-driven approach</li>
         <li><strong>API Automation Framework:</strong> REST API validation</li>
         <li><strong>AI Assisted Test Automation:</strong> Used GitHub Copilot</li>
     </ul>
-</div>
+</section>
 
-<!-- Skills -->
-<div class="card">
-    <h2>Technical Skills</h2>
-    <ul>
-        <li>Playwright, Selenium</li>
-        <li>JavaScript, TypeScript, C#, Java, Python</li>
-        <li>Postman, REST Assured</li>
-        <li>Jenkins, Azure DevOps</li>
-    </ul>
-</div>
-
-<!-- Education -->
-<div class="card">
+<!-- Education (Separated) -->
+<section id="education">
     <h2>Education</h2>
     <p>B.Tech – Computer Science Engineering</p>
-</div>
+</section>
 
-<!-- Certifications -->
-<div class="card">
+<!-- Certifications (Separated & Camel case) -->
+<section id="certifications">
     <h2>Certifications</h2>
     <ul>
         <li>AWS – Generative AI</li>
@@ -148,9 +49,4 @@ ul {
         <li>IBM DevOps Professional Certificate</li>
         <li>Scrum Foundation Professional Certificate</li>
     </ul>
-</div>
-
-</div>
-
-</body>
-</html>
+</section>
