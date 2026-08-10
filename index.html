@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bindhu Bhargavi Talasila — SDET / Automation Engineer</title>
+<meta name="description" content="Bindhu Bhargavi Talasila — SDET with 4.5+ years building automation frameworks for Web, API, and backend systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10192B;
+    --ink-soft:#1B2740;
+    --paper:#F2F4EF;
+    --paper-2:#E9ECE3;
+    --surface:#FFFFFF;
+    --line:#DBDED3;
+    --line-dark:#2C3A57;
+    --text:#10192B;
+    --text-muted:#5B6470;
+    --text-on-ink:#F2F4EF;
+    --text-on-ink-muted:#9BA6BC;
+    --pass:#1E8A5F;
+    --pass-strong:#166B49;
+    --warn:#C9762B;
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Manrope', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    background:var(--paper);
+    color:var(--text);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--pass);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(242,244,239,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--maxw); margin:0 auto; padding:16px 28px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .nav-mark{
+    font-family:var(--font-mono); font-size:13px; font-weight:600;
+    letter-spacing:0.02em;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  .nav-mark span{color:var(--pass);}
+  nav.nav-links{display:flex; align-items:center; gap:26px;}
+  nav.nav-links a{
+    font-family:var(--font-body); font-size:14.5px; font-weight:600;
+    text-decoration:none; color:var(--text-muted);
+    transition:color 0.15s ease;
+  }
+  nav.nav-links a:hover{color:var(--ink);}
+  .btn-resume{
+    font-family:var(--font-mono); font-size:13px; font-weight:600;
+    background:var(--ink); color:var(--paper);
+    padding:9px 16px; border-radius:5px;
+    text-decoration:none; white-space:nowrap;
+    border:1px solid var(--ink);
+    transition:background 0.15s ease, transform 0.15s ease;
+  }
+  .btn-resume:hover{background:var(--pass-strong); border-color:var(--pass-strong); transform:translateY(-1px);}
+  .nav-toggle{display:none;}
+
+  /* ---------- HERO ---------- */
+  section.hero{
+    padding:76px 0 64px;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-family:var(--font-mono); font-size:13px; color:var(--pass-strong);
+    letter-spacing:0.01em; margin:0 0 18px;
+  }
+  .eyebrow::before{content:"// "; color:var(--text-muted);}
+  h1.name{
+    font-family:var(--font-display); font-weight:700;
+    font-size:clamp(34px, 5.4vw, 56px);
+    line-height:1.05; margin:0 0 14px; color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+  p.tagline{
+    font-size:clamp(17px, 2vw, 20px); color:var(--text-muted);
+    max-width:560px; margin:0 0 34px; font-weight:500;
+  }
+
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:48px;}
+  .btn{
+    font-family:var(--font-body); font-weight:700; font-size:15px;
+    padding:13px 22px; border-radius:6px; text-decoration:none;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-primary{background:var(--pass); color:#fff;}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(30,138,95,0.28);}
+  .btn-secondary{background:transparent; color:var(--ink); border:1.5px solid var(--line-dark); border-color:#c7cbbc;}
+  .btn-secondary:hover{border-color:var(--ink); transform:translateY(-2px);}
+
+  /* terminal card */
+  .terminal{
+    background:var(--ink);
+    border-radius:10px;
+    padding:22px 24px 24px;
+    max-width:620px;
+    box-shadow:0 20px 50px -20px rgba(16,25,43,0.45);
+  }
+  .terminal-bar{display:flex; gap:7px; margin-bottom:16px;}
+  .terminal-dot{width:10px; height:10px; border-radius:50%; background:#3A4A6B;}
+  .terminal-body{font-family:var(--font-mono); font-size:13.5px; color:var(--text-on-ink-muted); min-height:132px;}
+  .terminal-line{white-space:pre; opacity:0; margin:0 0 9px;}
+  .terminal-line .ok{color:var(--pass); font-weight:600;}
+  .terminal-line .tag{color:var(--warn); font-weight:600;}
+  .terminal-line.cmd{color:var(--text-on-ink); opacity:1; margin-bottom:14px;}
+  .cursor{display:inline-block; width:7px; height:14px; background:var(--pass); vertical-align:-2px; animation:blink 1s steps(1) infinite;}
+  @keyframes blink{50%{opacity:0;}}
+  @keyframes fadein{to{opacity:1;}}
+
+  /* ---------- QUICK FACTS ---------- */
+  .facts{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;}
+  .chip{
+    font-family:var(--font-mono); font-size:12.5px; font-weight:500;
+    background:var(--surface); border:1px solid var(--line);
+    padding:7px 12px; border-radius:5px; color:var(--text-muted);
+  }
+  .chip b{color:var(--ink); font-weight:600;}
+  .chip.status{color:var(--pass-strong); border-color:#bfe0cf; background:#eaf6ef;}
+
+  /* ---------- SECTION SCAFFOLD ---------- */
+  section{padding:64px 0;}
+  section + section{border-top:1px solid var(--line);}
+  .section-head{margin-bottom:34px;}
+  .section-head .eyebrow{margin-bottom:8px;}
+  h2.section-title{
+    font-family:var(--font-display); font-size:clamp(24px,3vw,32px);
+    font-weight:600; margin:0; color:var(--ink);
+  }
+
+  /* ---------- ABOUT ---------- */
+  p.about-text{font-size:17px; color:var(--text); max-width:700px; margin:0 0 24px;}
+
+  /* ---------- ACHIEVEMENTS ---------- */
+  .stat-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line); border-radius:10px; overflow:hidden;
+  }
+  .stat-card{background:var(--surface); padding:26px 20px;}
+  .stat-num{font-family:var(--font-mono); font-size:clamp(26px,3.4vw,34px); font-weight:600; color:var(--pass-strong); margin-bottom:6px;}
+  .stat-label{font-size:13.5px; color:var(--text-muted); font-weight:600; line-height:1.35;}
+
+  /* ---------- EXPERIENCE ---------- */
+  .role{padding:28px 0; border-top:1px solid var(--line);}
+  .role:first-of-type{border-top:none; padding-top:0;}
+  .role-head{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:4px;}
+  .role-title{font-family:var(--font-display); font-size:19px; font-weight:600; color:var(--ink);}
+  .role-dates{font-family:var(--font-mono); font-size:13px; color:var(--text-muted);}
+  .role-company{font-size:14.5px; color:var(--pass-strong); font-weight:600; margin-bottom:14px;}
+  ul.role-bullets{margin:0; padding:0 0 0 20px;}
+  ul.role-bullets li{margin-bottom:9px; color:var(--text); font-size:15px;}
+  ul.role-bullets li::marker{color:var(--pass);}
+
+  /* ---------- PROJECTS ---------- */
+  .project-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .project-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:24px; display:flex; flex-direction:column; gap:12px;
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .project-card:hover{transform:translateY(-3px); box-shadow:0 14px 30px -18px rgba(16,25,43,0.3);}
+  .project-title{font-family:var(--font-display); font-size:16.5px; font-weight:600; color:var(--ink);}
+  .project-desc{font-size:14.5px; color:var(--text-muted); flex-grow:1;}
+  .tag-row{display:flex; flex-wrap:wrap; gap:6px;}
+  .tag{font-family:var(--font-mono); font-size:11.5px; background:var(--paper-2); color:var(--ink); padding:4px 8px; border-radius:4px;}
+
+  /* ---------- SKILLS ---------- */
+  .skill-group{margin-bottom:20px;}
+  .skill-label{font-family:var(--font-mono); font-size:12.5px; font-weight:600; color:var(--text-muted); margin-bottom:10px; text-transform:uppercase; letter-spacing:0.04em;}
+  .skill-chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .skill-chip{
+    font-size:13.5px; font-weight:600; color:var(--ink);
+    background:var(--surface); border:1px solid var(--line);
+    padding:7px 12px; border-radius:20px;
+  }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-row{display:flex; justify-content:space-between; gap:16px; padding:16px 0; border-top:1px solid var(--line); flex-wrap:wrap;}
+  .edu-row:first-of-type{border-top:none;}
+  .edu-name{font-weight:700; color:var(--ink); font-size:15px;}
+  .edu-sub{color:var(--text-muted); font-size:13.5px; margin-top:2px;}
+  .edu-date{font-family:var(--font-mono); font-size:13px; color:var(--text-muted); white-space:nowrap;}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  footer.contact{
+    background:var(--ink); color:var(--text-on-ink); padding:72px 0 40px; border-top:none;
+  }
+  footer.contact .eyebrow{color:#6FD3A6;}
+  footer.contact h2{
+    font-family:var(--font-display); font-size:clamp(28px,4vw,42px); font-weight:600;
+    margin:0 0 18px; color:#fff; max-width:640px;
+  }
+  .contact-links{display:flex; flex-wrap:wrap; gap:14px; margin:28px 0 48px;}
+  .contact-links a{
+    font-family:var(--font-mono); font-size:14px; font-weight:500;
+    color:var(--text-on-ink); background:var(--ink-soft);
+    border:1px solid var(--line-dark); padding:11px 16px; border-radius:6px;
+    text-decoration:none; transition:border-color 0.15s ease, background 0.15s ease;
+  }
+  .contact-links a:hover{border-color:var(--pass); background:#22304C;}
+  .foot-bottom{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    padding-top:26px; border-top:1px solid var(--line-dark);
+    font-family:var(--font-mono); font-size:12px; color:var(--text-on-ink-muted);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px){
+    .stat-grid{grid-template-columns:repeat(2,1fr);}
+    .project-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width: 700px){
+    nav.nav-links{display:none;}
+    .btn-resume{padding:8px 12px; font-size:12px;}
+    section.hero{padding:52px 0 44px;}
+    section{padding:48px 0;}
+    .role-head{flex-direction:column; align-items:flex-start;}
+    .edu-row{flex-direction:column; gap:4px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="#top">BINDHU<span>.</span>TALASILA</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn-resume" href="Bindhu_Talasila_SDET_4_5Y_Immediate_C.pdf" download>Resume ↓</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">sdet · automation engineer · hyderabad, india</p>
+      <h1 class="name">Bindhu Bhargavi Talasila</h1>
+      <p class="tagline">I build automation frameworks that catch bugs before your customers do.</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-secondary" href="Bindhu_Talasila_SDET_4_5Y_Immediate_C.pdf" download>Download résumé</a>
+      </div>
+
+      <div class="terminal" role="img" aria-label="Terminal output showing: 4.5+ years in test automation, 200+ end-to-end tests automated, 40% reduction in regression time, immediate joiner — all passing checks">
+        <div class="terminal-bar">
+          <span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
+        </div>
+        <div class="terminal-body" id="termBody">
+          <p class="terminal-line cmd">$ ./run-checks.sh --candidate=bindhu</p>
+          <p class="terminal-line" data-delay="300">✓ <span>4.5+ years in test automation</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ok">[PASS]</span></p>
+          <p class="terminal-line" data-delay="900">✓ <span>200+ end-to-end tests automated</span>&nbsp;&nbsp;<span class="ok">[PASS]</span></p>
+          <p class="terminal-line" data-delay="1500">✓ <span>40% reduction in regression time</span>&nbsp;<span class="ok">[PASS]</span></p>
+          <p class="terminal-line" data-delay="2100">✓ <span>Immediate joiner</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">[READY]</span><span class="cursor"></span></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">about</p>
+        <h2 class="section-title">Testing is the job, not a checkbox</h2>
+      </div>
+      <p class="about-text">
+        I'm an SDET with 4.5+ years designing and maintaining automation frameworks for Web, API, and backend systems —
+        across Hospitality POS and Banking/Fintech. I work in BDD with C#, Selenium, Playwright, and SpecFlow,
+        automate API validation with Postman and RestSharp, and build the CI/CD pipelines that run it all on schedule.
+        I care about tests that catch real regressions, not tests that just pass.
+      </p>
+      <div class="facts">
+        <span class="chip"><b>Location:</b>&nbsp;Hyderabad, India</span>
+        <span class="chip"><b>Experience:</b>&nbsp;4.5+ years</span>
+        <span class="chip status">● Immediate Joiner</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">by the numbers</p>
+        <h2 class="section-title">Key achievements</h2>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-num">40%</div>
+          <div class="stat-label">Regression time cut via parallel automation &amp; optimized pipelines</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">200+</div>
+          <div class="stat-label">End-to-end test cases automated across POS &amp; Connected Payments</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2+ hrs</div>
+          <div class="stat-label">Saved per release cycle on nightly regression runs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">30%</div>
+          <div class="stat-label">Improvement in defect triage efficiency</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">experience</p>
+        <h2 class="section-title">Where I've worked</h2>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <span class="role-title">Software Quality Engineer – Automation (SDET)</span>
+          <span class="role-dates">Oct 2023 – Feb 2026</span>
+        </div>
+        <div class="role-company">NCR Voyix, Hyderabad</div>
+        <ul class="role-bullets">
+          <li>Designed BDD-based automation frameworks in C#, Java, SpecFlow, Selenium, and NUnit — cut regression effort by 40%.</li>
+          <li>Automated 200+ end-to-end tests across POS and Connected Payments, covering orders, payments, device integrations, and transactions.</li>
+          <li>Built and optimized Jenkins CI/CD pipelines for nightly regression, saving 2+ hours per release cycle.</li>
+          <li>Built REST API test automation with Postman for robust backend validation, and used AI coding assistants (GitHub Copilot, Claude) to speed up script authoring by 35%.</li>
+          <li>Improved defect triage efficiency by 30% with structured Extent Reports, and supported release readiness across Agile sprints.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">C#</span><span class="tag">Selenium</span><span class="tag">SpecFlow</span><span class="tag">NUnit</span><span class="tag">Jenkins</span><span class="tag">Postman</span>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <span class="role-title">Software Engineer – SDET / Automation Engineer</span>
+          <span class="role-dates">Nov 2021 – Oct 2023</span>
+        </div>
+        <div class="role-company">Kyndryl Solutions Pvt Ltd, Hyderabad</div>
+        <ul class="role-bullets">
+          <li>Automated monitoring workflows across 3,000+ servers, cutting manual effort by 40%.</li>
+          <li>Wrote shell scripts to remove repetitive operational tasks, saving 10+ hours a week.</li>
+          <li>Ran log analysis and root cause investigations for critical production issues.</li>
+          <li>Supported CI/CD and deployment for zero-downtime releases; managed incidents and changes via ServiceNow within SLA.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Shell Scripting</span><span class="tag">CI/CD</span><span class="tag">ServiceNow</span><span class="tag">Monitoring</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">projects</p>
+        <h2 class="section-title">Frameworks I've built</h2>
+      </div>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-title">POS Automation Framework</div>
+          <p class="project-desc">A hybrid BDD + Page Object Model + data-driven framework for end-to-end retail workflow automation, wired into CI/CD. Built at NCR Voyix.</p>
+          <div class="tag-row">
+            <span class="tag">BDD</span><span class="tag">POM</span><span class="tag">Data-driven</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">API Automation Framework</div>
+          <p class="project-desc">A REST API automation suite that validates service contracts and integration flows before they reach production.</p>
+          <div class="tag-row">
+            <span class="tag">REST Assured</span><span class="tag">Postman</span><span class="tag">RestSharp</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">AI-Assisted Test Automation</div>
+          <p class="project-desc">Explored Claude and GitHub Copilot to auto-generate SpecFlow step definitions and test data, cutting script-writing time significantly.</p>
+          <div class="tag-row">
+            <span class="tag">Claude</span><span class="tag">Copilot</span><span class="tag">SpecFlow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">skills</p>
+        <h2 class="section-title">Toolbox</h2>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Automation &amp; Testing</div>
+        <div class="skill-chips">
+          <span class="skill-chip">Selenium WebDriver</span><span class="skill-chip">Playwright</span><span class="skill-chip">WinAppDriver</span><span class="skill-chip">Appium</span><span class="skill-chip">SpecFlow (BDD)</span><span class="skill-chip">NUnit</span><span class="skill-chip">Cucumber</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Languages</div>
+        <div class="skill-chips">
+          <span class="skill-chip">C#</span><span class="skill-chip">Java</span><span class="skill-chip">JavaScript</span><span class="skill-chip">Groovy</span><span class="skill-chip">Shell Scripting</span><span class="skill-chip">TypeScript</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">API Testing</div>
+        <div class="skill-chips">
+          <span class="skill-chip">Postman</span><span class="skill-chip">REST Assured</span><span class="skill-chip">RestSharp</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">CI/CD &amp; Cloud</div>
+        <div class="skill-chips">
+          <span class="skill-chip">Jenkins</span><span class="skill-chip">Azure DevOps</span><span class="skill-chip">Git</span><span class="skill-chip">GitHub</span><span class="skill-chip">Azure VMs</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">QA Process</div>
+        <div class="skill-chips">
+          <span class="skill-chip">SDLC</span><span class="skill-chip">STLC</span><span class="skill-chip">Defect Lifecycle</span><span class="skill-chip">JIRA</span><span class="skill-chip">PractiTest</span><span class="skill-chip">Agile Scrum</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">education &amp; certifications</p>
+        <h2 class="section-title">Background</h2>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-name">B.Tech – Computer Science Engineering</div>
+          <div class="edu-sub">BVRIT Hyderabad College of Engineering for Women</div>
+        </div>
+        <div class="edu-date">2018 – 2021</div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-name">IBM DevOps and Software Engineering Professional Certificate</div>
+        </div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-name">Scrum Foundation Professional Certificate (SFPC)</div>
+        </div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-name">AI in the Real World — IBM</div>
+        </div>
+        <div class="edu-date">Jul 2026</div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-name">Introduction to Generative AI – Art of the Possible — AWS</div>
+        </div>
+        <div class="edu-date">Jul 2026</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">contact</p>
+    <h2>Hiring for an SDET role in Hyderabad? Let's talk.</h2>
+    <div class="contact-links">
+      <a href="mailto:bindhutalasila08@gmail.com">bindhutalasila08@gmail.com</a>
+      <a href="tel:+919100861350">+91 91008 61350</a>
+      <a href="https://linkedin.com/in/bindhu-bhargavi-talasila" target="_blank" rel="noopener">linkedin.com/in/bindhu-bhargavi-talasila</a>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Bindhu Bhargavi Talasila</span>
+      <span>Open to SDET / QA Automation roles — Hyderabad, hybrid or remote</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lines = document.querySelectorAll('#termBody .terminal-line[data-delay]');
+    if(reduce){
+      lines.forEach(function(l){ l.style.opacity = 1; });
+      return;
+    }
+    lines.forEach(function(l){
+      var delay = parseInt(l.getAttribute('data-delay'), 10) || 0;
+      setTimeout(function(){
+        l.style.animation = 'fadein 0.4s ease forwards';
+      }, delay);
+    });
+  })();
+</script>
+
+</body>
+</html>
