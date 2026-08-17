@@ -1,6 +1,6 @@
 # Bindhu Talasila — Portfolio
 
-Personal portfolio site for **Bindhu Bhargavi Talasila**, SDET / Automation Engineer with 4.5+ years building test automation frameworks for Web, API, and backend systems.
+Personal portfolio site for **Bindhu Bhargavi Talasila**, SDET / Automation Engineer with 4.5+ years building test automation frameworks for Desktop,Web, API, and backend systems.
 
 🔗 **Live site:** https://bindhutalasila08.github.io/Bindhu-Talasila-Portfolio/
 
